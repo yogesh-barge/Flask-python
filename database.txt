@@ -1,0 +1,31 @@
+database
+ medical_shop_db
+
+
+
+
+ desc items;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| id       | int          | NO   | PRI | NULL    | auto_increment |
+| name     | varchar(255) | YES  |     | NULL    |                |
+| price    | float        | YES  |     | NULL    |                |
+| quantity | int          | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+
+
+
+
+----+--------------+-------+----------+
+| id | name         | price | quantity |
++----+--------------+-------+----------+
+|  1 | paracetamol  |    40 |       25 |
+|  3 | dolo         |   120 |        3 |
+|  4 | citrizine    |    20 |       10 |
+|  5 | meftal spass |    90 |        5 |
+|  6 | combiflame   |    48 |       15 |
+|  7 | crocin       |    35 |       12 |
+|  9 | anacin       |    40 |       20 |
+| 11 | gylomate     |   350 |        5 |
++----+--------------+-------+----------+

@@ -1,0 +1,100 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Edit Item</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>Edit Item</h1>-->
+<!--    <form action="/items/edit/{{ item[0] }}" method="POST">-->
+<!--        <label for="name">Name:</label>-->
+<!--        <input type="text" id="name" name="name" value="{{ item[1] }}"><br><br>-->
+<!--        <label for="price">Price (₹):</label>-->
+<!--        <input type="text" id="price" name="price" value="{{ item[2] }}"><br><br>-->
+<!--        <label for="quantity">Quantity:</label>-->
+<!--        <input type="text" id="quantity" name="quantity" value="{{ item[3] }}"><br><br>-->
+<!--        <input type="submit" value="Update Item">-->
+<!--    </form>-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Item</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 50px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        form {
+            width: 80%;
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            width: calc(100% - 20px);
+            padding: 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 18px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Edit Item</h1>
+    <form action="/items/edit/{{ item[0] }}" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ item[1] }}"><br>
+        <label for="price">Price (₹):</label>
+        <input type="text" id="price" name="price" value="{{ item[2] }}"><br>
+        <label for="quantity">Quantity:</label>
+        <input type="text" id="quantity" name="quantity" value="{{ item[3] }}"><br>
+        <input type="submit" value="Update Item">
+    </form>
+</body>
+</html>

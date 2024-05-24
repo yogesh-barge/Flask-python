@@ -1,0 +1,164 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--     <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>MedicalStore</title>-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+
+<!--</head>-->
+<!--<body>-->
+<!--<h2 align="center">Welcome to the Medical Store Dashboard!</h2>-->
+<!--<p align="center"><a href="/items">View Items</a></p>-->
+<!--<canvas id="barChart" width="75%" height="25%"></canvas>-->
+
+<!--    <script>-->
+<!--        // Fetch data from Flask backend and format it as needed-->
+<!--        // Example data-->
+<!--        var data = {-->
+<!--            labels: ["Week-1","Week-2","Week-3","Week-4"],-->
+<!--            datasets: [{-->
+<!--                label: 'Number of Medicines Sold per week in a month ',-->
+<!--                data: [2000,1500,2500,5000],-->
+<!--                backgroundColor: [-->
+<!--                    'rgba(255, 99, 132, 0.2)',-->
+<!--                    'rgba(54, 162, 235, 0.2)',-->
+<!--                    'rgba(255, 206, 86, 0.2)',-->
+<!--                    'rgba(75, 192, 192, 0.2)',-->
+<!--                    'rgba(153, 102, 255, 0.2)',-->
+<!--                    'rgba(255, 159, 64, 0.2)'-->
+<!--                ],-->
+<!--                borderColor: [-->
+<!--                    'rgba(255, 99, 132, 1)',-->
+<!--                    'rgba(54, 162, 235, 1)',-->
+<!--                    'rgba(255, 206, 86, 1)',-->
+<!--                    'rgba(75, 192, 192, 1)',-->
+<!--                    'rgba(153, 102, 255, 1)',-->
+<!--                    'rgba(255, 159, 64, 1)'-->
+<!--                ],-->
+<!--                borderWidth: 1-->
+<!--            }]-->
+<!--        };-->
+
+<!--        // Get the canvas element-->
+<!--        var ctx = document.getElementById('barChart').getContext('2d');-->
+
+<!--        // Initialize the bar chart-->
+<!--        var barChart = new Chart(ctx, {-->
+<!--            type: 'bar',-->
+<!--            data: data,-->
+<!--            options: {-->
+<!--                scales: {-->
+<!--                    yAxes: [{-->
+<!--                        ticks: {-->
+<!--                            beginAtZero: true-->
+<!--                        }-->
+<!--                    }]-->
+<!--                }-->
+<!--            }-->
+<!--        });-->
+<!--    </script>-->
+
+
+
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedicalStore</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5; /* Set background color */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 50px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        #barChart {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to the Medical Store Dashboard!</h2>
+    <a href="/items" class="btn">View Items</a>
+    <canvas id="barChart" width="75%" height="25%"></canvas>
+
+    <script>
+        // Fetch data from Flask backend and format it as needed
+        // Example data
+        var data = {
+            labels: ["Week-1","Week-2","Week-3","Week-4"],
+            datasets: [{
+                label: 'Number of Medicines Sold per week in a month ',
+                data: [2000,1500,2500,5000],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        // Get the canvas element
+        var ctx = document.getElementById('barChart').getContext('2d');
+
+        // Initialize the bar chart
+        var barChart = new Chart(ctx, {
+            type: 'bar',
+            data: data,
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+</body>
+</html>
